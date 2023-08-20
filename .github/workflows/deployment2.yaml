@@ -1,0 +1,32 @@
+name: Deploy Project Two
+on: [push, workflow_dispatch] # Events / Triggers
+jobs:
+  test: 
+    runs-on: ubuntu-latest #runner
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3 # pre-defined action from GitHub Marketplace
+      - name: Install NodeJS
+        uses: actions/checkout@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
+  deploy:
+    needs: [test]   # Sequential Execution (Jobs) 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/checkout@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Project
+        run: npm run build
+      - name: Deploy
+        run: echo "Deploying ...."
