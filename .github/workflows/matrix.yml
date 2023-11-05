@@ -2,14 +2,14 @@ name: Matrix Demo
 on: push
 jobs:
   build:
-    stratergy:
+    strategy:
       matrix: # multiple configurations to run the actions.....
         node-version: [12, 14, 16]
         operating-system: [ubuntu-latest, windows-latest]
-        include: # include combinations from matrix stratergy
+        include: # include combinations from matrix strategy
           - node-version: 18 
             operating-system: ubuntu-latest
-        exclude:  # exclude combinations from matrix stratergy
+        exclude:  # exclude combinations from matrix strategy
           - node-version: 12
             operating-system: windows-latest
     runs-on: ${{ matrix.operating-system }}
