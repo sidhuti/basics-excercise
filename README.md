@@ -63,4 +63,5 @@ Each workflow is designed for specific tasks ranging from testing, building, dep
 To use this project, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
+gh repo clone https://github.com/sidhuti/basics-excercise.git
+
