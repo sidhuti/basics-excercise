@@ -16,7 +16,7 @@ Each workflow is designed for specific tasks ranging from testing, building, dep
   - **Build:** Compiles the application and uploads necessary artifacts.
   - **Deploy:** Downloads the artifacts and deploys the application to the production environment.
 
-### Caching (`caching1.yml`)
+### Caching (`caching.yml`)
 - **Trigger:** Activated on push to `main` or `master` branches.
 - **Description:** Utilizes caching for dependencies to enhance the speed of the build process.
 - **Jobs:**
@@ -44,7 +44,7 @@ Each workflow is designed for specific tasks ranging from testing, building, dep
   - **Lint and Test:** Performs linting and runs tests using cached dependencies.
   - **Build and Deploy:** Builds and deploys the application, ensuring efficient use of resources.
 
-### Use and Reuse (`useReuse.yml`)
+### Use and Reuse (`use-reuse.yml`)
 - **Trigger:** Activated on push to `main` or `master` branches.
 - **Description:** Maximizes the reuse of configurations and steps across different jobs within the workflow to maintain efficiency.
 - **Jobs:**
